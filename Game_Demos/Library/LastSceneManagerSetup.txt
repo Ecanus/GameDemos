@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Assignment_1_(Maze).unity
+- path: Assets/Scenes/Assignment_2_(Collisions).unity
   isLoaded: 1
   isActive: 1
