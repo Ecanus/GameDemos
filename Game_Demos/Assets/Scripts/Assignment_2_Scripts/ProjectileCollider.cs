@@ -18,10 +18,6 @@ public class ProjectileCollider : MonoBehaviour {
 	/// </summary>
 	private float a_CoeffRestitution;
 
-	/// <summary>
-	/// Damper variable to help keep bounces from going too high
-	/// </summary>
-	private float a_Damper;
 
 	/// <summary>
 	/// The bounds of this collider
@@ -100,8 +96,7 @@ public class ProjectileCollider : MonoBehaviour {
 		_Bounds = GetComponent<Renderer> ().bounds;
 		_Cannonball = GetComponent<Cannonball> ();
 
-		// Instantiate Damper and Restitution to modify collision resolution
-		a_Damper = 1;
+		// Instantiate Restitution to modify collision resolution
 		a_CoeffRestitution = 0.10f;
 	}
 	

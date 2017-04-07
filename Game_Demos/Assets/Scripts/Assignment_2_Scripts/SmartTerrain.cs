@@ -16,7 +16,7 @@ public class SmartTerrain : MonoBehaviour {
 	/// <summary>
 	/// The list of all Terrains instantiated and placed
 	/// </summary>
-	private LinkedList<Transform> a_TerrainList;
+	//private LinkedList<Transform> a_TerrainList;
 
 	/// <summary>
 	/// The prefab of the Terrain
@@ -32,7 +32,7 @@ public class SmartTerrain : MonoBehaviour {
 	/// <summary>
 	/// List which manages the points that make up the 'joints' between terrain
 	/// </summary>
-	private LinkedListNode<Transform> currentPoint;
+	//private LinkedListNode<Transform> currentPoint;
 
 
 	/// <summary>
@@ -55,10 +55,6 @@ public class SmartTerrain : MonoBehaviour {
 	/// </summary>
 	private Vector3 a_GroundVector;
 
-	/// <summary>
-	/// State of being able to create more terrain
-	/// </summary>
-	private bool canCreate;
 
 	/// <summary>
 	/// Creates the terrain list to be populated and then used to place the terrain
@@ -66,9 +62,8 @@ public class SmartTerrain : MonoBehaviour {
 	/// <param name="p_PointsList">P points list.</param>
 	public void createTerrainList(LinkedList<Transform> p_PointsList)
 	{
-		a_TerrainList = new LinkedList<Transform> (p_PointsList);
-		currentPoint = a_TerrainList.First;
-		canCreate = true;
+		//a_TerrainList = new LinkedList<Transform> (p_PointsList);
+		//currentPoint = a_TerrainList.First;
 	}
 
 	/// <summary>
@@ -78,7 +73,7 @@ public class SmartTerrain : MonoBehaviour {
 	public void draw(LinkedList<Transform> p_PointsList)
 	{
 		
-		currentPoint = new LinkedListNode<Transform>(p_PointsList.First.Value);
+		//currentPoint = new LinkedListNode<Transform>(p_PointsList.First.Value);
 		placePlane (p_PointsList.First.Value, p_PointsList.First.Next.Value);
 	}
 
@@ -137,6 +132,5 @@ public class SmartTerrain : MonoBehaviour {
 	void Start () {
 
 		a_GroundVector = Vector3.right;
-		canCreate = false;
 	}
 }

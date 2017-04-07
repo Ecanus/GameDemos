@@ -8,12 +8,6 @@ using UnityEngine;
 public class Cannonball : MonoBehaviour {
 
 	/// <summary>
-	/// The coefficient adding a drag
-	/// </summary>
-	[SerializeField]
-	private float a_DragCoeff;
-
-	/// <summary>
 	/// Time passed between current time and next update of projectile motion
 	/// </summary>
 	private float a_TimePassed;
@@ -141,8 +135,6 @@ public class Cannonball : MonoBehaviour {
 		// Set the epsilon for determining a stationary state
 		epsilon = 0.0005f;
 
-		// Initialise drag coefficient value
-		a_DragCoeff = 0.5f;
 
 		// Set the applied external forces equal to 0 at start
 		a_CollisionForce = Vector2.zero;

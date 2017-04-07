@@ -9,23 +9,11 @@ using UnityEngine;
 /// </summary>
 public class GOATParticleCollider : MonoBehaviour {
 
-
-	private Vector3 _StickyPosition; 
-
-	/// <summary>
-	/// The transform component attached to this gameObject
-	/// </summary>
-	private Transform _transform;
-
 	/// <summary>
 	/// The GOAT component attached to this gameObject
 	/// </summary>
 	private GOATParticle _GOATParticle;
 
-	/// <summary>
-	/// The GOAT manager attached to this gameObject
-	/// </summary>
-	private GOATManager _GOATManager;
 
 	/// <summary>
 	/// The bounds of this collider
@@ -43,10 +31,6 @@ public class GOATParticleCollider : MonoBehaviour {
 	[SerializeField]
 	private bool isSticky;
 
-	/// <summary>
-	/// State of the Particle having been stuck
-	/// </summary>
-	private bool isStuck;
 
 	/// <summary>
 	/// Loop through all objects containing bounds, and check if they intersect with this collider
@@ -127,19 +111,14 @@ public class GOATParticleCollider : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		isStuck = false;
 
 		_Bounds = GetComponent<Renderer> ().bounds;
 		_GOATParticle = GetComponent<GOATParticle> ();
-		_GOATManager = transform.parent.parent.GetComponent<GOATManager> ();
 
-		_transform = GetComponent<Transform> ();
 	}
 
 	// Update is called once per frame
 	void FixedUpdate () {
-
-		if (isStuck) { transform.position = _StickyPosition; }
 
 		// Check for if colliding with terrain or projectiles
 		checkAllBounds();

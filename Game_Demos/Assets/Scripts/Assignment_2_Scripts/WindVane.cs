@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class WindVane : MonoBehaviour {
 
-
-	private SpriteRenderer _SpriteRenderer;
 	private Transform _Transform;
 
 	private Vector2 a_TempVector;
@@ -22,7 +20,6 @@ public class WindVane : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		_SpriteRenderer = GetComponent<SpriteRenderer> ();
 		_Transform = GetComponent<Transform> ();
 	}
 	

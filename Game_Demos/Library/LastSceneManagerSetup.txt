@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Assignment_2_(Collisions).unity
+- path: Assets/Scenes/Assignment_3_(AI).unity
   isLoaded: 1
   isActive: 1
